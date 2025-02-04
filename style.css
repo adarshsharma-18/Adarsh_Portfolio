@@ -9,11 +9,11 @@
 .banner{
     position: relative;
     min-height: 100vh;
-    background: url(images/banner.jpg);
+    background: url(images/banner.png);
     background-size: cover;
-    background-position: right;
+    background-position: left;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 }
 section{
@@ -320,7 +320,7 @@ img{
     .w50{
         margin-bottom: 20px;
     }
-    .services .content .servicesBx{
+    .Projects .content .ProjectsBx{
         margin: 10px;
     }
     .work .content .workBx{
