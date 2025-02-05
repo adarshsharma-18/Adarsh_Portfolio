@@ -37,17 +37,25 @@ section{
 }
 .btn{
     position: relative;
-    background: #2196f3;
+    background: #fed700; 
     display: inline-block;
-    color: #fff;
+    color: #000;
     margin-top: 20px;
     padding: 10px 30px;
     font-size: 18px;
+    border-radius: 12px;
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 2px;
-    font-weight: 500;
+    letter-spacing: 1px;
+    font-weight: 700;
+    
 }
+.btn:hover {
+    animation: bubble 0.4s ease-out;
+}
+
+
+
 header{
     position: fixed;
     top: 0;
@@ -110,11 +118,27 @@ header.sticky ul li a{
 }
 .contentBx{
     padding-right: 30px;
+    flex-basis: 60%
 }
 .contentBx h3{
     font-size: 24px;
     margin-bottom: 10px;
 }
+.about-skills{
+    flex-basis: 35%;
+  }
+  .about-skills ul li{
+    border-bottom: 1px dashed #303030;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #000000;
+    font-size: 18px;
+  }
+  .about-skills ul li:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
 .w50{
     min-width: 50%;
 }
@@ -130,10 +154,12 @@ img{
 .Projects .content{
     display: flex;
     justify-content: center;
+    align-items: stretch;
     flex-wrap: wrap;
     flex-direction: row;
 }
 .Projects .content .ProjectsBx{
+    flex: 1;
     padding: 40px 20px;
     background: #222;
     color: #fff;
@@ -141,9 +167,12 @@ img{
     margin: 20px;
     text-align: center;
     transition: 0.5s;
+    height: 90%; 
+    min-height: 300px;
 }
 .Projects .content .ProjectsBx:hover{
-    background: #2196f3;
+    background: #fed700;
+    color: #000;
 }
 .Projects .content .ProjectsBx img{
     max-width: 80px;
@@ -153,18 +182,100 @@ img{
     font-size: 20px;
     font-weight: 600;
 }
-.work .content{
+.Projects .content .ProjectsBx h3{
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.education-content .row{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.work .content .workBx{
-    width: 50%;
-    padding: 20px;
-}
-.work .content .workBx img{
-    max-width: 100%;
-}
+    border-radius: 5px;
+    height: fit-content;
+    width: fit-content;
+    margin-bottom: 250px;
+    background-color: #222;
+    padding: 30px;
+  }
+  
+  .education-content .title{
+    color: #000000;
+  }
+  .education-content .row .education,
+  .education-content .row .internship
+  {
+    color: #ffffff;
+    flex:0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+  } 
+  
+  .education-content  h3.title{
+    font-size:24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+  }
+  .education-content .row.timeline-box{
+    flex:0 0 100%;
+    max-width: 100%;  
+  }
+  .education-content .row .timeline{
+    
+    padding: 30px 15px;
+    border: 1px solid #e5e5e5;
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
+  }
+  .education-content .row .timeline-item{
+    position:relative;
+    padding-left: 37px;
+    padding-bottom: 50px; 
+  }
+  .education-content .row  .internship .timeline-item{
+    position:relative;
+    padding-left: 37px;
+    padding-bottom: 30px; 
+  }
+  .education-content .row .timeline-item:last-child{
+    padding-bottom: 0;
+  }
+  .education-content .row .timeline-item::before{
+    content: "";
+    width: 1px;
+    position: absolute;
+    height: 100%;
+    left: 7px;
+    top: 0;
+    background-color: #fed700;  
+  }
+  .education-content .row .circle-dot{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #ffffff;
+  }
+  .education-content .row .timeline-title  {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 12px;
+    color: #ffffff
+  }
+  .education-content .row .internship .timeline-title  {
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+  .education-content .row .timeline-text{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    
+  }
+  
 .contact{
     background: #111;
 }
@@ -199,10 +310,29 @@ img{
 } 
 .formbx form input[type = 'submit']{
     max-width: 100px;
-    background: #2196f3;
+    background: #fed700;
+    color: #000;
+    border-radius:  12px ;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
+    font-weight: 700%;
+
+}
+.formbx form input[type = 'submit']:hover {
+    animation: bubble 0.4s ease-out;
+}
+  
+@keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
 }
 .contactInfo{
     min-width: 40%;
@@ -234,7 +364,7 @@ img{
 }
 .contactInfoBx .box .text h3{
     font-weight: 500;
-    color: #2196f3;
+    color: #fed700;
     margin-bottom: 0;
 }
 .copyright{
@@ -308,6 +438,21 @@ img{
         padding: 10px 20px;
         font-size: 16px;
     }
+    .btn:hover {
+        animation: bubble 0.7s ease-out;
+    }
+      
+    @keyframes bubble {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.2);
+        }
+        100% {
+          transform: scale(1);
+        }
+    }
     .heading h2{
         font-size: 24px;
     }
@@ -323,6 +468,7 @@ img{
     .Projects .content .ProjectsBx{
         margin: 10px;
     }
+    
     .work .content .workBx{
         width: 100%;
         padding: 10px;
